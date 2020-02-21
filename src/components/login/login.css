@@ -12,8 +12,7 @@ body {
   align-items: center;
 }
 .box {
-  width: 350px;
-  height: 260px;
+  padding: 40px;
   background: #fff;
   border-color: white;
   border-style: solid;

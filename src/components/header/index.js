@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Layout } from "antd";
-import "./Header.css";
+import "./header.css";
 
 const { Header } = Layout;
 class HeaderHome extends React.Component {

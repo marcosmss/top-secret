@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./Home.css";
-import Header from "../Header/Header";
-import StoreMenu from "../StoreMenu/StoreMenu";
+import "./home.css";
+import Header from "../header";
+import StoreMenu from "../StoreMenu";
 
 class Home extends React.Component {
   render() {
