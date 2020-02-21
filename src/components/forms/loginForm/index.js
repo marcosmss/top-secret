@@ -1,9 +1,10 @@
 import React from "react";
 import { Form, Icon, Input, Button } from "antd";
-import "./login.css";
+import "./loginForm.css";
 import { useNavigate } from 'react-router';
-import Logo from './../../assets/img/logo_superbid.png'
-function Login(props) {
+import Logo from './../../../assets/img/logo_superbid.png'
+
+function LoginForm(props) {
 
   const navigate = useNavigate()
 
@@ -67,5 +68,5 @@ function Login(props) {
   );
 }
 
-export default Form.create('Login')(Login);
+export default Form.create('Login')(LoginForm);
 

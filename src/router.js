@@ -5,16 +5,16 @@ import {
   Route
 } from 'react-router-dom';
 
-import Login from './components/login'
-import Home from './components/home'
+import LoginPage from './pages/loginPage';
+import HomePage from './pages/homePage';
 
 
 export default function Router() {
   return (          
     <BrowserRouter>      
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="home" element={<Home />} />        
+        <Route path="/" element={<LoginPage />} />
+        <Route path="home" element={<HomePage />} />        
       </Routes>
     </BrowserRouter>    
   );

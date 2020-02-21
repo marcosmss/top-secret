@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu, Icon, Layout, Row, Col } from "antd";
-import StoreInfo from "../StoreInfo";
+import StoreInfo from "../storeInfo";
 
 const { SubMenu } = Menu;
 const { Sider } = Layout;
