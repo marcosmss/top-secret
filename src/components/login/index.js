@@ -1,8 +1,8 @@
 import React from "react";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { Form, Icon, Input, Button } from "antd";
 import "./login.css";
 import { useNavigate } from 'react-router';
-
+import Logo from './../../assets/img/logo_superbid.png'
 function Login(props) {
 
   const navigate = useNavigate()
@@ -20,6 +20,7 @@ function Login(props) {
   return (
     <div className="container">
       <div className="box">
+        <img src={Logo} alt="" srcset="" className="img-login" />
         <Form onSubmit={handleSubmit} className="login-form">
           <Form.Item>
             {getFieldDecorator("username", {
@@ -50,23 +51,15 @@ function Login(props) {
               />
             )}
           </Form.Item>
-          <Form.Item>
-            {getFieldDecorator("remember", {
-              valuePropName: "checked",
-              initialValue: true
-            })(<Checkbox>Remember me</Checkbox>)}
-            <a className="login-form-forgot" href="/">
-              Forgot password
-            </a>
+          <Form.Item>            
             <Button
-              type="default"
+              type="primary"
               onClick={() => navigate('/home')}
               htmlType="submit"
               className="login-form-button"
             >
               Log in
-            </Button>
-            Or <a href="/">register now!</a>
+            </Button>            
           </Form.Item>
         </Form>
       </div>

@@ -20,12 +20,29 @@ body {
 }
 .login-form {
   width: fit-content;
+  min-width: 300px;
+  min-height: 200px;
   background-color: white;
 }
 .login-form-forgot {
   float: right;
 }
 .login-form-button {
-  width: 100%;
+  width: 70%;
+  margin: auto;
+  display: block;
   background-color: #ec660b;
+  border: 0;
+  margin-top: 20px;
+  color: "#FFF !important"
+}
+.login-form-button:hover{
+  background-color: #ec660b;
+
+}
+
+.img-login {
+  margin: auto;
+  display: block;
+  padding-bottom: 40px;
 }
