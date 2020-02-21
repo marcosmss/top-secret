@@ -15,7 +15,7 @@ export default function HeaderHome() {
         className="menu-header"
       >        
         <Menu.Item key="1" onClick={() => navigate('/admin/home')}>Home</Menu.Item>
-        <Menu.Item key="2" onClick={() => navigate('/admin/projects')}>Lista de Projetos</Menu.Item>
+        <Menu.Item key="2" onClick={() => navigate('/admin/projects')}>Projetos</Menu.Item>
         <Menu.Item key="9" className="exit-menu"  onClick={() => navigate('/')}>Sair</Menu.Item>
     </Menu>
   </Header>  );
