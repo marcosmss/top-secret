@@ -3,3 +3,7 @@
 .menu-header {
   line-height: 64px;
 }
+
+.exit-menu {
+  float: right;
+}
