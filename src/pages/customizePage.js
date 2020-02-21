@@ -7,7 +7,8 @@ import MyPicker from './myPicker'
 function CustomizePage() {
 
   const [project, setProject] = useState(null);
-  const [color, setColor] = useState("orange")
+  const [colors, setColors] = useState({ primary: { light: "", main: "", dark: "" }, secondary: { light: "", main: "", dark: "" }})
+
   let { id } = useParams();
 
   useEffect(() => {
@@ -15,27 +16,26 @@ function CustomizePage() {
       async function loadProject() {
         const response = await api.get(`/faststore/${id}`);
         setProject(response.data);
+        setColors(response.data.pallete)
       }
       loadProject();                    
     }
   }, [id, project]);
    
   function handleChange(data){
-    setColor(data)
+    setColors(data)
   }
 
   return (
-    !project ? 
-      <h1>loading</h1> :
     <Row>
       <Col style={{ padding: 40, marginTop: 100, backgroundColor: "#FFF"}} lg={{ span: 20, offset: 2}}>
         <Row type="flex">          
           <ul>
             <li>Cor Primarias</li>
-            <li>light: {project.pallete.primary.light} 
-              <MyPicker          
-                color={color}
-                onChangeComplete={ handleChange }
+            <li>light: 
+              <MyPicker                
+                color={colors.primary.light}
+                onChangeComplete={(e) => setColors({...colors, ...colors.primary.light = e}) }
               />
             </li>
             <li>main: {project && project.pallete.primary.main}</li>
