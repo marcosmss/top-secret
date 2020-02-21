@@ -55,7 +55,7 @@ function LoginForm(props) {
           <Form.Item>            
             <Button
               type="primary"
-              onClick={() => navigate('/home')}
+              onClick={() => navigate('/admin/home')}
               htmlType="submit"
               className="login-form-button"
             >
